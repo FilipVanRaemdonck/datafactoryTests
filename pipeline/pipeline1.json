@@ -15,8 +15,22 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"source": {
+						"type": "JsonSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"wildcardFileName": "*.json"
+						}
+					},
 					"enableStaging": false
-				}
+				},
+				"inputs": [
+					{
+						"referenceName": "Json1",
+						"type": "DatasetReference"
+					}
+				]
 			},
 			{
 				"name": "Notebook1",
