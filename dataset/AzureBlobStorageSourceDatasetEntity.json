@@ -6,6 +6,14 @@
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "AzureBlob"
+		"type": "AzureBlob",
+		"typeProperties": {
+			"format": {
+				"type": "JsonFormat",
+				"filePattern": "setOfObjects"
+			},
+			"fileName": "meetingsOneYear.json",
+			"folderPath": "calendar"
+		}
 	}
 }
