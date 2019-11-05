@@ -1,0 +1,61 @@
+{
+	"name": "Json4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "meetingsOneYear.json",
+				"folderPath": "calendar",
+				"container": "calendar"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"isPrivate": {
+					"type": "boolean"
+				},
+				"status": {
+					"type": "string"
+				},
+				"subject": {
+					"type": "string"
+				},
+				"location": {
+					"type": "string"
+				},
+				"start": {
+					"type": "object",
+					"properties": {
+						"dateTime": {
+							"type": "string"
+						},
+						"timeZone": {
+							"type": "string"
+						}
+					}
+				},
+				"end": {
+					"type": "object",
+					"properties": {
+						"dateTime": {
+							"type": "string"
+						},
+						"timeZone": {
+							"type": "string"
+						}
+					}
+				},
+				"room": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}

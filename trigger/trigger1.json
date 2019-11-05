@@ -9,11 +9,16 @@
 					"referenceName": "pipeline1",
 					"type": "PipelineReference"
 				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "DataflowCopy",
+					"type": "PipelineReference"
+				}
 			}
 		],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
-			"blobPathBeginsWith": "/calendar/blobs/",
 			"ignoreEmptyBlobs": false,
 			"scope": "/subscriptions/deb2c822-0ca3-4aa2-8605-9899a999888e/resourceGroups/databricksTraining/providers/Microsoft.Storage/storageAccounts/meetingdata",
 			"events": [
