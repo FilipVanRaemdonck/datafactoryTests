@@ -10,8 +10,14 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "meetingsOneYear.json",
-				"container": "calendar"
+				"fileName": {
+					"value": "meetingsOneYear",
+					"type": "Expression"
+				},
+				"container": {
+					"value": "calendar",
+					"type": "Expression"
+				}
 			}
 		},
 		"schema": {
