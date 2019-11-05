@@ -287,7 +287,6 @@
 					"location": {
 						"type": "AzureBlobStorageLocation",
 						"fileName": "meetingsOneYear.json",
-						"folderPath": "*",
 						"container": "calendar"
 					}
 				},
