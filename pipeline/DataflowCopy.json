@@ -17,8 +17,12 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "BlobSource",
-						"recursive": true
+						"type": "JsonSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"wildcardFileName": "*.json"
+						}
 					},
 					"sink": {
 						"type": "ParquetSink"
@@ -27,7 +31,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "AzureBlobStorageSourceDatasetEntity",
+						"referenceName": "Json1",
 						"type": "DatasetReference"
 					}
 				],
