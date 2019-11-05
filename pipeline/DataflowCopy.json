@@ -34,7 +34,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "Json1",
+						"referenceName": "Json4",
 						"type": "DatasetReference"
 					}
 				],
