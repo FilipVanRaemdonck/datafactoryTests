@@ -1,0 +1,19 @@
+{
+	"name": "Jsont4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "testfile.json",
+				"folderPath": "test",
+				"container": "loaded"
+			}
+		}
+	}
+}

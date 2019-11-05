@@ -21,9 +21,13 @@
 						"recursive": true
 					},
 					"sink": {
-						"type": "ParquetSink",
+						"type": "JsonSink",
 						"storeSettings": {
 							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings",
+							"quoteAllText": true
 						}
 					},
 					"enableStaging": false
@@ -36,7 +40,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "StagingParquet",
+						"referenceName": "Jsont4",
 						"type": "DatasetReference"
 					}
 				]
