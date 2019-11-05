@@ -438,7 +438,6 @@
 					"location": {
 						"type": "AzureBlobStorageLocation",
 						"fileName": "file.json",
-						"folderPath": "container",
 						"container": "outputdataflow"
 					}
 				},
