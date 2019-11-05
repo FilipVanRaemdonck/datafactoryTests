@@ -25,7 +25,10 @@
 						}
 					},
 					"sink": {
-						"type": "ParquetSink"
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						}
 					},
 					"enableStaging": false
 				},
