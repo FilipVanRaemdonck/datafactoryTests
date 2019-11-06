@@ -95,7 +95,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"functionName": "FunctionAppDataFactoryPtb/api/DecompressFile",
+					"functionName": "DecompressFile",
 					"method": "POST",
 					"body": "{\nfileName: \"testing.txt\"\n}"
 				},
