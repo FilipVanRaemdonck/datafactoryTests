@@ -6,10 +6,6 @@
 			"type": "string",
 			"metadata": "Data Factory name",
 			"defaultValue": "DataFactoryPtb"
-		},
-		"trigger1_properties_typeProperties_scope": {
-			"type": "string",
-			"defaultValue": "/subscriptions/deb2c822-0ca3-4aa2-8605-9899a999888e/resourceGroups/databricksTraining/providers/Microsoft.Storage/storageAccounts/meetingdata"
 		}
 	},
 	"variables": {
@@ -66,15 +62,13 @@
 						"inputs": [
 							{
 								"referenceName": "Json5",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "Jsont4",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					},
@@ -100,14 +94,8 @@
 						"typeProperties": {
 							"dataflow": {
 								"referenceName": "Trasformation",
-								"type": "DataFlowReference",
-								"parameters": {},
-								"datasetParameters": {
-									"source1": {},
-									"sink1": {}
-								}
-							},
-							"staging": {}
+								"type": "DataFlowReference"
+							}
 						}
 					},
 					{
@@ -125,7 +113,6 @@
 						"typeProperties": {
 							"functionName": "DecompressFile",
 							"method": "POST",
-							"headers": {},
 							"body": "{\nfileName: \"testing.txt\"\n}"
 						},
 						"linkedServiceName": {
@@ -137,36 +124,6 @@
 				"annotations": []
 			},
 			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/trigger1')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"runtimeState": "Started",
-				"pipelines": [
-					{
-						"pipelineReference": {
-							"referenceName": "DataflowCopy",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					}
-				],
-				"type": "BlobEventsTrigger",
-				"typeProperties": {
-					"blobPathBeginsWith": "/calendar/blobs/",
-					"ignoreEmptyBlobs": false,
-					"scope": "[parameters('trigger1_properties_typeProperties_scope')]",
-					"events": [
-						"Microsoft.Storage.BlobCreated"
-					]
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/pipelines/DataflowCopy')]"
-			]
 		}
 	]
 }
