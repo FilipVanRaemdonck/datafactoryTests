@@ -11,17 +11,38 @@
 		"AzureBlobStorage2_connectionString": {
 			"value": ""
 		},
-		"linkedService1_connectionString": {
+		"AzureBlobStorage3_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
 		"AzureFunction1_functionKey": {
 			"value": ""
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"linkedService1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorageSinkFileStore_properties_typeProperties_fileName": {
+			"value": ""
+		},
+		"AzureBlobStorageSinkFileStore_properties_typeProperties_folderPath": {
+			"value": "@dataset().folder"
 		},
 		"AzureBlobStorageSourceDatasetEntity_properties_typeProperties_fileName": {
 			"value": "meetingsOneYear.json"
 		},
 		"AzureBlobStorageSourceDatasetEntity_properties_typeProperties_folderPath": {
 			"value": "calendar"
+		},
+		"AzureBlobStorageSourceFileStore_properties_typeProperties_folderPath": {
+			"value": "@dataset().folder"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://storageinpudadls.dfs.core.windows.net"
 		},
 		"trigger1_properties_typeProperties_scope": {
 			"value": "/subscriptions/deb2c822-0ca3-4aa2-8605-9899a999888e/resourceGroups/databricksTraining/providers/Microsoft.Storage/storageAccounts/meetingdata"
