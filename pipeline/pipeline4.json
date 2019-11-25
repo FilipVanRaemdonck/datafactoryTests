@@ -32,7 +32,7 @@
 						"mappings": [
 							{
 								"source": {
-									"path": "$['testcol']"
+									"path": "$['tetcol']"
 								},
 								"sink": {
 									"name": "tetcol"
