@@ -488,10 +488,10 @@
 								"mappings": [
 									{
 										"source": {
-											"path": "$['testcol']"
+											"path": "$['tetcol']"
 										},
 										"sink": {
-											"name": "testcol"
+											"name": "tetcol"
 										}
 									}
 								]
