@@ -32,10 +32,11 @@
 						"mappings": [
 							{
 								"source": {
-									"path": "$['tetcol']"
+									"name": "testcol",
+                        						"type": "string"
 								},
 								"sink": {
-									"name": "tetcol"
+									"name": "testcol"
 								}
 							}
 						]
